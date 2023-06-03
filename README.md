@@ -6,3 +6,5 @@
 4. *.tfvars, *.tfvars.json - будет игнорировать все файлы с данными именами
 5. *_override.tf, *_override.tf.json - будет игнорировать все файлы с данными именами
 6. .terraformrc, terraform.rc - тоже самое
+
+Изменение для IDE PyCharm
