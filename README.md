@@ -8,3 +8,4 @@
 6. .terraformrc, terraform.rc - тоже самое
 
 Изменение для задания 3 Ветки
+Изменение для IDE PyCharm
