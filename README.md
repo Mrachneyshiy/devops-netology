@@ -9,5 +9,9 @@
 
 Изменение для IDE PyCharm
 
+Решение к заданию "Основы Git": 
+https://github.com/Mrachneyshiy/devops-netology
+https://gitlab.com/skvorling/devops-netology
 
+Решение к заданию «Ветвления в Git»: 
 https://github.com/Mrachneyshiy/devops-netology/network
