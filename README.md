@@ -9,4 +9,5 @@
 
 Изменение для IDE PyCharm
 
-Ссылка на задание "Ветвления в Git": https://github.com/Mrachneyshiy/devops-netology/network
+
+https://github.com/Mrachneyshiy/devops-netology/network
