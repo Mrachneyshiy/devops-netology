@@ -9,6 +9,8 @@
 выберите любой образ, который содержит веб-сервер Nginx;
 создайте свой fork образа;
 реализуйте функциональность: запуск веб-сервера в фоне с индекс-страницей, содержащей HTML-код ниже:
+
+```
 <html>
 <head>
 Hey, Netology
@@ -17,6 +19,8 @@ Hey, Netology
 <h1>I’m DevOps Engineer!</h1>
 </body>
 </html>
+
+```
 Опубликуйте созданный fork в своём репозитории и предоставьте ответ в виде ссылки на https://hub.docker.com/username_repo.
 
 ## Ответ:
@@ -73,6 +77,8 @@ https://hub.docker.com/r/mrachneyshiy/devops-netology
 ## Ответ:
 
 Запуск первого контейнера:
+
+```
 [skvorchenkov@localhost ~]$ sudo docker run -v /data:/data —name centos-container -d -t centos
 Unable to find image 'centos:latest' locally
 latest: Pulling from library/centos
@@ -80,8 +86,10 @@ a1d0c7532777: Pull complete
 Digest: sha256:a27fd8080b517143cbbbab9dfb7c8571c40d67d534bbdee55bd6c473f432b177
 Status: Downloaded newer image for centos:latest
 894b9eabbe9a11d8efd3536196a854c4d8fcfc1355a4d5a0db52b098234c8f74
-
+```
 Запуск второго контейнера:
+
+```
 [skvorchenkov@localhost ~]$ sudo docker run -v /data:/data —name debian-container -d -t debian
 Unable to find image 'debian:latest' locally
 latest: Pulling from library/debian
@@ -89,14 +97,20 @@ bba7bb10d5ba: Pull complete
 Digest: sha256:d568e251e460295a8743e9d5ef7de673c5a8f9027db11f4e666e96fb5bed708e
 Status: Downloaded newer image for debian:latest
 3f0e659c7858db95227a37afa44f6f8c3a9c74e287c18480db2aad48ab265812
-
+```
 Подключитемся к первому контейнеру с помощью docker exec и создаем текстовый файл любого содержания в /data:
+
+```
 [skvorchenkov@localhost ~]$ sudo docker exec centos-container /bin/bash -c "echo test>/data/readme_centos.md"
-
+```
 Добавляем ещё один файл в папку /data на хостовой машине:
-[root@localhost skvorchenkov]# echo test_2 > /data/readme_host.md
 
+```
+[root@localhost skvorchenkov]# echo test_2 > /data/readme_host.md
+```
 Подключаемся во второй контейнер и отображаем листинг и содержание файлов в /data контейнера:
+
+```
 [root@localhost skvorchenkov]# docker exec -it debian-container /bin/bash
 root@3f0e659c7858:/# cd /data/
 root@3f0e659c7858:/data# ls -l
@@ -107,7 +121,7 @@ root@3f0e659c7858:/data# cat readme_centos.md
 test
 root@3f0e659c7858:/data# cat readme_host.md
 test_2
-
+```
 
 
 
